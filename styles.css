@@ -33,7 +33,6 @@ header img[alt="Rosto Luiz Miguel"] {
 header h1{
     font-size: 50px;
     letter-spacing: 1px;
-    margin-bottom: 5px;
 }
 
 header h2{
@@ -57,101 +56,129 @@ header li{
     margin: 8px 0;
 }
 
+header li img{
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
 header li a{
     text-decoration: none;
     color: white;
 }
 
-header li img{
-    border-radius: 30rem;
-    width: 30px;
-    border: 0;
-    margin-bottom: 0%;
+.container-grid{
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 20px;
+    padding: 40px 50px;
 }
 
-
-main{
-    margin-left: 2.5rem;
+.container-grid section{
+    margin-bottom: 30px;
 }
 
-main section{
-    margin: 2rem 0;
-}
-
-main h2{
-    background-color: #a7a7a7;
-    padding: 8px 16px;
+.container-grid h2{
+    color: rgb(32, 32, 95);
+    background-color: #dbdbdb;
     display: inline-block;
-    margin: 0 0 15px 0 ;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #e2e8f0;
+
     text-transform: uppercase;
     font-size: 25px;   
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
-main h3{
+.container-grid h3{
+    color: #1a202c;
     font-size: 18px; 
     font-weight: 500;
-}
-
-main p{
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 850px;
-    text-align: justify;
-}
-
-.Borda {
-    border-left: 3px solid #000000;
-    padding-left: 20px;
-    list-style: none;
-}
-
-.Borda li{
-    margin-bottom: 0.8rem;
-}
-
-.Borda h3{
-    padding-bottom: 5px;
+    margin-bottom: 3px;
     font-weight: 600;
 }
 
-.Borda a{
+.container-grid p{
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4a5568;
+    max-width: 800px;
+    text-align: justify;
+}
+
+/*ESQUERDA*/
+
+.data {
+    font-style: italic;
+    color: #718096;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+.borda, .borda_pontos{
+    border-left: 3px solid #000000;
+    padding-left: 15px;
+    list-style: none;
+}
+
+.borda_pontos ul{
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #4a5568;
+}
+
+.borda li{
+    margin-bottom: 0.8rem;
+}
+
+.borda h3{
+    padding-bottom: 5px;
+}
+
+.borda a{
     text-decoration: none;
     color: #0056d6;
 }
 
-.Borda_conhecimentos{
-    border-left: 3px solid #000000;
-    padding-left: 20px;
-    list-style: none;
+/*DIREITA*/
+
+.lista-simples li {
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 15px;
 }
 
-.Borda_conhecimentos li{
+.lista-simples li::before {
+    content: "•";
+    color: rgb(32, 32, 95);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.grade-tecnologias {
     display: flex;
-    align-items: center;
-    gap: 5px;
-    margin: 8px 0;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.Borda_conhecimentos img{
-    height: 40px;
-    width: 40px;
-    border-radius: 10px;
-
+.grade-tecnologias li {
+    display: block;
+    font-size: 18px; 
+    color: #4a5568;
 }
 
-.Borda_pontos{
-    border-left: 3px solid #000000;
-    padding-left: 20px;
-    margin: 0;  
-}
-
-.Borda_pontos h3{
-    font-weight: 600;
-}
-
-.Borda_pontos ul{
-    padding: 1rem 0rem 1rem 2rem ;
+.grade-tecnologias strong {
+    color: rgb(32, 32, 95);
+    display: inline-block;
+    margin-bottom: 2px;
 }
 
 /*
@@ -164,83 +191,63 @@ footer{
 }
 */
 
-
-
-
-
 @media (max-width: 760px) {
+    header {
+        padding: 30px 20px;
+    }
 
-.grupo{
-    flex-direction: column;   
-    gap: 12px;                
-    align-items: center;    
-    padding: 12px 10px;
-}
+    .grupo {
+        flex-direction: column; 
+        text-align: center;
+        gap: 15px;
+    }
 
-header img {
-    width: 150px;          
-    border-width: 3px;
-}
+    header img[alt="Rosto Luiz Miguel"] {
+        width: 180px;
+        height: 180px;
+        border-width: 3px;
+    }
 
-header h1{
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 0.5rem;
-}
+    header h1 {
+        font-size: 32px; 
+    }
 
-header h2{
-    font-size: 20px;
-    text-align: center;
-}
+    header h2 {
+        font-size: 22px;
+    }
 
-header ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    header ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
 
-header li {
-    font-size: 16px;
-}
+    header li {
+        font-size: 16px;
+    }
 
-header li img {
-    width: 20px;
-}
+    .container-grid {
+        grid-template-columns: 1fr; 
+        padding: 20px;
+        gap: 10px;
+    }
 
+    .container-grid h2 {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
 
-main {
-    margin: auto;
-    padding: 0 14px;
-}
+    .container-grid p, 
+    .borda_pontos ul, 
+    .grade-tecnologias li,
+    .lista-simples li {
+        font-size: 16px;
+    }
 
-main h2 {
-    font-size: 18px;
-    padding: 6px 12px;
-}
-
-main p {
-    font-size: 15px;
-    line-height: 1.5;
-}  
-
-.Borda li{
-    font-size: 15px;
-}
-
-.Borda li h3{
-    font-size: 16px;
-}
-
-.Borda_pontos h3{
-    font-size: 16px;
-}
-
-.Borda_pontos{
-    font-size: 14px;
-}
-
-footer{
-    font-size: 13px;
-}
-
+    .borda, .borda_pontos {
+        padding-left: 10px;
+        border-left-width: 2px;
+    }
 }
